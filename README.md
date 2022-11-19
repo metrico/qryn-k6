@@ -36,7 +36,7 @@ Use the examples folder as a starting point to create custom load test scripts
 ./k6 run examples/simple.js
 ```
 
-### Multi-Tenance
+### Multi-Tenancy
 If Loki is configured in multi-tenant mode but you want to use xk6-loki in single user mode, you can specify the username, and optionally also the password, in the user info part of the URL. It would look like this:
 
 `const conf = loki.Config(“http://username[:password]@localhost:3100”)`
