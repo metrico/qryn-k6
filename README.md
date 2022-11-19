@@ -2,7 +2,7 @@
 
 # qryn-k6
 
-Testing `qryn` using `xk6-loki`
+Testing [qryn](https://qryn.dev) using [xk6-loki](https://grafana.com/blog/2022/06/08/a-quick-guide-to-load-testing-grafana-loki-with-grafana-k6/)
 
 ## Getting started
 
