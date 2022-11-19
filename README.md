@@ -4,6 +4,9 @@
 
 Testing [qryn](https://qryn.dev) using [xk6-loki](https://grafana.com/blog/2022/06/08/a-quick-guide-to-load-testing-grafana-loki-with-grafana-k6/)
 
+Grafana k6 is a modern and scriptable load-testing tool, featuring an extension that allows simulating real-world LogQL load to test the scalability, reliability, and performance of your qryn installation.
+
+
 ## Getting started
 
 1. Install `xk6`
