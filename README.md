@@ -47,7 +47,7 @@ export default function () {
   sleep(1);
 }
 ``` 
-The recommended option to pass environment variables to your testing script is to use one or more `-e` / `--env` flag:
+Pass environment variables to your testing script using one or more `-e` / `--env` flags:
 ```
 k6 run -e HOST=http://localhost:3100 --duration 10s --vus 10 script.js
 ```
