@@ -35,3 +35,13 @@ Use the examples folder as a starting point to create custom load test scripts
 ```
 ./k6 run examples/simple.js
 ```
+
+### Multi-Tenance
+If Loki is configured in multi-tenant mode but you want to use xk6-loki in single user mode, you can specify the username, and optionally also the password, in the user info part of the URL. It would look like this:
+
+`const conf = loki.Config(“http://username[:password]@localhost:3100”)`
+
+This way, every request, both for pushing and querying logs, is done using the same X-Scope-OrgID header across all VUs on the load test. Otherwise, k6 will attempt using a different X-Scope-OrgID for each VU in the load test. 
+
+### qryn.cloud
+When testing with `qryn-cloud` the Customer injected OrgIDs are ignored and auto-injected by the edge upon authentication.
