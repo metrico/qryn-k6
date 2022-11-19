@@ -27,9 +27,11 @@ Grafana k6 is a modern and scriptable load-testing tool, featuring an extension 
    ```bash
    make k6
    ```
+   
+Once the extension is built, use the resulting binary to execute a load test files written in Javascript.
 
 ## Testing
-Use the examples folder to create custom scripts to execute using k6
+Use the examples folder as a starting point to create custom load test scripts
 ```
 ./k6 run examples/simple.js
 ```
