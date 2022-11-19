@@ -36,6 +36,22 @@ Use the examples folder as a starting point to create custom load test scripts
 ./k6 run examples/simple.js
 ```
 
+### ENV Variables
+In k6, environment variables are exposed through a global `__ENV` variable. For reference, see the script example below:
+```javascript
+import http from 'k6/http';
+import { sleep } from 'k6';
+
+export default function () {
+  const res = http.get(`${__ENV.HOST}`);
+  sleep(1);
+}
+``` 
+The recommended option to pass environment variables to your testing script is to use one or more `-e` / `--env` flag:
+```
+$ k6 run -e HOST=http://localhost:3100 script.js
+```
+
 ### Multi-Tenancy
 If Loki is configured in multi-tenant mode but you want to use xk6-loki in single user mode, you can specify the username, and optionally also the password, in the user info part of the URL. It would look like this:
 
