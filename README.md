@@ -49,7 +49,7 @@ export default function () {
 ``` 
 The recommended option to pass environment variables to your testing script is to use one or more `-e` / `--env` flag:
 ```
-$ k6 run -e HOST=http://localhost:3100 script.js
+k6 run -e HOST=http://localhost:3100 --duration 10s --vus 10 script.js
 ```
 
 ### Multi-Tenancy
